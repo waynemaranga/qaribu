@@ -25,11 +25,18 @@ blue_ocean = Company(
     description=description
 )
 
+# greenfield = Company(
+# phoneix = Company(
+
 # Convert the instance to a dictionary
-company_data = blue_ocean.to_dict()
+blue_ocean_data = blue_ocean.to_dict()
+# greenfeld_data = greenfeld.to_dict()
+# phoenix_data = phoenix.to_dict()
 
 # Store the data in JSON format
-with open("company_data.json", "w") as json_file:
-    json.dump(company_data, json_file, indent=2)
+with open("blue_ocean.json", "w") as json_file:
+    json.dump(blue_ocean_data, json_file, indent=2)
 
-print("Company data has been saved to company_data.json.")
+print("Blue Ocean has been saved to company_data.json.")
+# print("Greenfeld has been saved to company_data.json.")
+# print("Phoenix has been saved to company_data.json.")
