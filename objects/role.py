@@ -17,3 +17,11 @@ class Role:
         print(f"Description: {self.description}")
         print(f"Responsibilities: {self.responsibilities}")
         print(f"Requirements: {self.requirements}")
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "description": self.description,
+            "responsibilities": self.responsibilities,
+            "requirements": self.requirements
+        }
