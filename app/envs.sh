@@ -1,7 +1,7 @@
 # Environment variables for AzureOpenAI
 # Key
 echo "Setting AZURE_OPENAI_KEY..."
-export AZURE_OPENAI_KEY="b8e6ac2cfda244dd848a823511255a0b"
+export AZURE_OPENAI_API_KEY="b8e6ac2cfda244dd848a823511255a0b"
 echo "AZURE_OPENAI_KEY set successfully!"
 
 # Endpoint
