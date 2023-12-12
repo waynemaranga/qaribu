@@ -7,10 +7,10 @@ concurrency:
 on:
   push:
     branches:
-      - main
+      - qaribu_mobile
   pull_request:
     branches:
-      - main
+      - qaribu_mobile
 
 jobs:
   semantic-pull-request:
@@ -27,3 +27,4 @@ jobs:
       includes: |
         **/*.md
       modified_files_only: false
+  
