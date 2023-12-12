@@ -7,6 +7,14 @@ concurrency:
 
 on: 
   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Loglevel'
+        required: false
+      tags: 
+        required: false
+      environment:
+        required: false
   push:
     branches:
       - qaribu_mobile
