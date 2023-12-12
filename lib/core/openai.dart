@@ -1,3 +1,4 @@
+// ignore_for_file: lines_longer_than_80_chars
 // import 'dart:io';
 // import 'package:dart_openai/dart_openai.dart';
 // import 'package:trotter/trotter.dart'; // Import trotter for the progress bar
