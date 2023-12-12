@@ -4,13 +4,10 @@ concurrency:
   group: $-$
   cancel-in-progress: true
 
-on:
-  push:
-    branches:
-      - qaribu_mobile
-  pull_request:
-    branches:
-      - qaribu_mobile
+
+on: 
+  workflow_dispatch:
+  
 
 
 jobs:
