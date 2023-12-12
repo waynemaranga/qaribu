@@ -4,21 +4,11 @@ concurrency:
   group: $-$
   cancel-in-progress: true
 
-
-on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Loglevel'
-        required: false
-      tags: 
-        required: false
-      environment:
-        required: false
+on:
   push:
     branches:
       - qaribu_mobile
-
+  workflow_dispatch:
 
 jobs:
   build:
@@ -41,13 +31,12 @@ jobs:
           KEY_JKS: ${{ secrets.KEY_JKS }}
           KEY_JKS_PASSWORD: ${{ secrets.KEY_JKS_PASSWORD }}
           ALIAS_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
-          run: base64 -d <<< $KEY_JKS > ./android/app/upload-keystore.jks && flutter build apk -t lib/main_development.dart --flavor development
+        run: base64 -d <<< $KEY_JKS > ./android/app/upload-keystore.jks && flutter build apk -t lib/main_development.dart --flavor development
       - name: Upload APK
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/flutter-apk/app-release.apk"
           tag: Release
           token: ${{ secrets.TOKEN }}
-
 
   
