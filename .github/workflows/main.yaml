@@ -35,7 +35,6 @@ jobs:
           KEY_JKS_PASSWORD: ${{ secrets.KEY_JKS_PASSWORD }}
           ALIAS_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
           run: base64 -d <<< $KEY_JKS > ./android/app/upload-keystore.jks && flutter build apk -t lib/main_development.dart --flavor development
-        run: 
       - name: Upload APK
         uses: ncipollo/release-action@v1
         with:
