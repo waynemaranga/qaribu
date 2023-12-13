@@ -35,7 +35,7 @@ jobs:
       - name: Upload APK
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/flutter-apk/app-release.apk"
+          artifacts: "build/app/outputs/flutter-apk/app-development-release.apk"
           tag: Release
           token: ${{ secrets.TOKEN }}
 
