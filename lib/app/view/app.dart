@@ -1,6 +1,9 @@
+// ignore_for_file: flutter_style_todos, lines_longer_than_80_chars
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qaribu/l10n/l10n.dart';
+import 'package:qaribu/on_boarding/view/onboarding_page.dart';
 import 'package:qaribu/root_layout/cubit/root_layout_cubit.dart';
 import 'package:qaribu/root_layout/view/root_layout.dart';
 import 'package:qaribu/root_layout/view/routes/generated_routes.dart';
@@ -18,10 +21,14 @@ class App extends StatelessWidget {
         darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: RootLayout(), // USE THIS AS INITIAL ROUTE
+        home: const OnBoardingPage(), // USE THIS AS INITIAL ROUTE
         // initialRoute: '/',
         onGenerateRoute: RouteGenerator().generateRoute,
       ),
     );
   }
 }
+// TODO: add splash screen to check authentication and load data to app
+// TODO: add authentication
+// TODO: add onboarding screen to help user understand how to use app 
+// flow is splash screen(check firt time opening and authentication) then onboarding -> authentication -> home

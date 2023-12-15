@@ -10,7 +10,7 @@ import 'package:qaribu/root_layout/cubit/root_layout_cubit.dart';
 class RootLayout extends StatelessWidget {
   RootLayout({super.key});
 
- final List<String> titles = const <String>[
+  final List<String> titles = const <String>[
     'Home',
     'Culture',
     'Expectations',
@@ -35,6 +35,10 @@ class RootLayout extends StatelessWidget {
       icon: Icon(Icons.library_books),
       label: 'Learning path',
     ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      label: 'Profile',
+    ),
   ];
 
   final List<Widget> pages = <Widget>[
@@ -42,6 +46,7 @@ class RootLayout extends StatelessWidget {
     const CulturePage(),
     const ExpectationPage(),
     const LearningPage(),
+    // ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
