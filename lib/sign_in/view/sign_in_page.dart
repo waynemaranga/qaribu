@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 class SignInPage extends StatefulWidget {
@@ -177,7 +178,10 @@ class _SignInPageState extends State<SignInPage> {
                           final password = _passwordController.text;
 
                           // redirect after successful signup
+
                           if (email == 'admin' && password == 'admin') {
+                          final prefs = await SharedPreferences.getInstance();
+                          await prefs.setBool('isAuthenticated', true);
                             await Navigator.of(context).pushReplacementNamed('/home');
                           }
 

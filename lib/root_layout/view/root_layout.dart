@@ -35,10 +35,10 @@ class RootLayout extends StatelessWidget {
       icon: Icon(Icons.library_books),
       label: 'Learning path',
     ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.person),
-      label: 'Profile',
-    ),
+    // BottomNavigationBarItem(
+    //   icon: Icon(Icons.person),
+    //   label: 'Profile',
+    // ),
   ];
 
   final List<Widget> pages = <Widget>[

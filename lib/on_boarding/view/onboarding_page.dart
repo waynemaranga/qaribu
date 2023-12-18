@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
@@ -131,6 +132,9 @@ Ask questions, engage with us, and let's achieve great things together!''',
       child: InkWell(
         borderRadius: defaultProceedButtonBorderRadius,
         onTap: () {
+          SharedPreferences.getInstance().then((prefs) {
+            prefs.setBool('isFirstTime', false);
+          });
           Navigator.pushReplacementNamed(context, '/signin');
         },
         child: const Padding(
